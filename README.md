@@ -5,4 +5,4 @@ AK Storm Surge Forecasting System (AKSSFS)
 =========================
 
 
-<img src="ice_concentration0414-0501-2020.gif" alt="hi" class="inline"/> 
+<img src="eta_0156.jpg" alt="hi" class="inline"/> 
