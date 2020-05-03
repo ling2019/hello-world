@@ -17,52 +17,54 @@ layout: default
 <h1 style="text-align:center">阿拉斯加风暴潮预测系统 (in Chinese)</h1>
 <h1 style="text-align:center">アラスカ高潮予測システム (in Japanese)</h1>
 <p>DISCLAIMER: this model is under development and testing, for study only.</p>
+<h2>1. Updates</h2>
 <p>Updated on 05-02-2020: Achieved updating the simulation results of 4 stations (Red Dog Dock, Prudhoe Bay, Unalakleet, Nome) automatically once per day, 
 and the observed data gather from the 4 NOAA stations updated 3 times (07:00, 12:00, 18:00) per day.<br /> 
   Established on 04-28-2020: Testing Version 01, forecast one time per day (starts running at 01:00 everyday automatically, using 408 cores).</p>
   
-<h2>Forcing boudary conditions</h2>
+<h2>2. Forcing boudary conditions for the model</h2>
 <p>Forcing 8 harmonic constituents on open ocean boundaries, 4 semi-diurnal : M2, N2, S2, K2; 4 diurnal : K1, Q1, O1, P1.<br /> 
 Reanalysis wind and ice products: <a href="https://nomads.ncdc.noaa.gov/data/gfsanl/" target="_blank">https://nomads.ncdc.noaa.gov/data/gfsanl/</a>; <br /> 
 Forecast wind and ice products: <a href="https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/" target="_blank">https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/</a>.<br /> 
 Simulation for 18 days, the first 10 days is using reanalysis met data and the last 8 days using forecast data. Spin up for 5 days, and dt=2s. </p>
 
-<h2>Flowchart</h2>
+<h2>3. Flowchart of the forecasting system</h2>
 <img src="images/flowchart.png" alt="hi" class="inline"/> 
   
-<h2>Mesh with floodplain (nodes: 1,648,088; elements: 3,211,583)</h2>
+<h2>4. Mesh with floodplain (nodes: 1,648,088; elements: 3,211,583)</h2>
 <img src="images/mesh4_fp_v2.png" alt="hi" class="inline"/> 
   
-<h2>Ice concentration</h2>
+<h2>5. Ice concentration</h2>
 <img src="images/ice_concentration0422-0504-2020.gif" alt="hi" class="inline"/>  
 
-<h2>Wind speed (applying gfs reanalysis and forecast wind)</h2>
+<h2>6. Wind speed (applying gfs reanalysis and forecast wind)</h2>
 <img src="images/wind_speed_0422-0504-2020.gif" alt="hi" class="inline"/>  
 
-<h2>Surface elevation</h2>
+<h2>7. Surface elevation</h2>
 <p>Animetion, 6 hourly output.</p>
 <img src="images/water_elevation.gif" alt="hi" class="inline"/>
 <p>Two snapshots.</p>
 <img src="images/eta_0400.jpg" alt="hi" class="inline"/>
 <img src="images/eta_0420.jpg" alt="hi" class="inline"/>  
 
-<h2>Maximum surface elevation during the simulation period</h2>
+<h2>8. Maximum surface elevation during the simulation period</h2>
 <a href="images/eta_max_wak.jpg" target="_blank">Zoom in costal area ([-170 -155 55 71])</a>
 <a  href="images/eta_max_wak.jpg"><img src="images/eta_max.jpg"/></a>
-  
-<h2>1. Simulation results at Red Dog Dock station (m)</h2>
+
+<h2>9. Comparison of water level at different stations </h2>  
+<h3>Nome Station</h3>
+<img src="images/Mar2020_stna01.png" alt="hi" class="inline"/>
+
+<h3>Red Dog Dock Station</h3>
 <img src="images/Mar2020_stna02.png" alt="hi" class="inline"/>
-  
-<h2>2. Simulation results at Prudhoe Bay station (m)</h2>
+
+<h3>Prudhoe Bay Station</h3>
 <img src="images/Mar2020_stna03.png" alt="hi" class="inline"/>
-  
-<h2>3. Simulation results at Unalakleet（observation data is not available, m） station</h2>
+
+<h3>Unalakleet（observation data is not available）Station</h3>
 <img src="images/Mar2020_stna04.png" alt="hi" class="inline"/>
-  
-<h2>4. Simulation results at Nome station（observation data is not available, m）</h2>
-<img src="images/Mar2020_stna01.png" alt="hi" class="inline"/>  
-  
-<h2>5. Simulation results at St. Michael station（m）</h2>
+
+<h3>St. Michael station</h3>
 <p>Gauge data is from JOA Surveys, LLC (<a href="http://joasurveys.com/rtwl/stmichael/" target="_blank">http://joasurveys.com/rtwl/stmichael/</a>), without filtering, raw data subtracts MSL(8.45m).</p>
 <img src="images/st_michael_gauge_raw_msl_data.png" alt="hi" class="inline"/>  
   
