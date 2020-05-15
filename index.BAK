@@ -50,7 +50,7 @@ min_el=1000, max_el=20000, wl=300, dt=2, grade=0.2, R=2, slp=20, dis=0.35, max_e
 and several sepcify bounding boxes for bays and inlets (Cook Inlet, Bristol Bay, Aleutian Islands, Kotzebue Sound, St. Lawrence Island) are set for min_el=200.<br />
 For the floodplain side, there are two floodplains in the mesh, 
 the first one is located at the north of Alaska, the second one is at Yukon Delta:<br />
-for the first one min_el=200, and the second one min_el=100. 
+for the first one min_el=200, the second one min_el=100 and the other parameters are set the same as ocean side. 
 </p>
 <img src="images/mesh4_fp_v2.png" alt="hi" class="inline"/> 
   
