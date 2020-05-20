@@ -40,12 +40,12 @@ and the latest observed data retrieved from the 4 NOAA stations updated 3 times 
 </ul>
 <!--<p>NOTES: The animations (5, 6, 7, 8) and the maximum surface elevation image (9) in this page are updated manually for the present, might not be updated everyday, but it is in plan to set up updating automatically for the future.</p> -->
 <h2>2. Flowchart of the forecasting system</h2>
-Fig.1 shows the flowchart for this forecasting system. 
+<p>Fig.1 shows the flowchart for this forecasting system. 
 In order to get a high quality initial condition to start the forecast, the forecast simulation for each day will run 10 days hindcast, 3 days gap forecast, 
 and finally 5 days for forecast. Here, the system includes a gap forecast because we can only get the hindcast meteorogical products till 3 days before. 
 In the recent version of this forecasting system, it will download the GFS(Global Forecast System) meteorological products (wind, pressure, ice concentration), 
 which including the data from 13 days before to 5 days after the present date. After downloading the data, the simulation will start from 13 days before the present date, 
-running 10 days hindcast with 5 days spin up using GFS reanalysis products (<a href="https://nomads.ncdc.noaa.gov/data/gfsanl/" target="_blank">https://nomads.ncdc.noaa.gov/data/gfsanl/</a>), then running the rest days by using forecast products (<a href="https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/" target="_blank">https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/</a>). 
+running 10 days hindcast with 5 days spin up using GFS reanalysis products (<a href="https://nomads.ncdc.noaa.gov/data/gfsanl/" target="_blank">https://nomads.ncdc.noaa.gov/data/gfsanl/</a>), then running the rest days by using forecast products (<a href="https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/" target="_blank">https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/</a>). </p>
 <figure>
 <img src="images/flowchart.png" alt="hi" class="inline"/> 
 <figcaption>Fig.1 - Flowchart</figcaption>
