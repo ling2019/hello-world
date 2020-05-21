@@ -19,6 +19,17 @@ figcaption {
   font-family: "Times New Roman";
   text-align: center;
 }
+ol.s {list-style-type: inherit;}
+ol {
+    counter-reset: list;
+}
+ol > li {
+    list-style: none;
+}
+ol > li:before {
+    content: counter(list) ") ";
+    counter-increment: list;
+}
 </style>
 
 </head>
@@ -29,7 +40,7 @@ figcaption {
 <h1 style="text-align:center">アラスカ高潮予測システム (in Japanese)</h1>
 <p>DISCLAIMER: this model is under development and testing, for study only.</p>
 <h2>UPDATES</h2>
-<ul type = "square">
+<ol class = "s">
 <!-- <li>Updated on 05-05-2020: Due to there are not free cores today, the simulation results haven't been updated yet. </li> -->
 <!--<li>Updated on 05-15-2020: Due to the computer maintenance from May 15 to 17, during this period the forecast results will not be updated.</li>-->
 <li>Updated on 05-08-2020: Achieved updating the animations automatically once per day at 09:00.</li>
@@ -37,7 +48,7 @@ figcaption {
 <li>Updated on 05-02-2020: Achieved updating the simulation results of 4 stations (Red Dog Dock, Prudhoe Bay, Unalakleet, Nome) automatically once per day, 
 and the latest observed data retrieved from the 4 NOAA stations updated 3 times (07:00, 12:00, 18:00) per day in this page.</li>
 <li>Established on 04-28-2020: Testing Version 01, forecast one time per day (starts running at 01:00 everyday automatically).</li>
-</ul>
+</ol>
 <!--<p>NOTES: The animations (5, 6, 7, 8) and the maximum surface elevation image (9) in this page are updated manually for the present, might not be updated everyday, but it is in plan to set up updating automatically for the future.</p> -->
 <h2>1. Introduction</h2>
 <p>This forecasting system is based on <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper370912.html" target="_blank">Studies on Parameterizations of Sea Ice Effect in a Storm Surge Model for Western Alaska</a>.</p>
@@ -134,7 +145,7 @@ the red line is <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper3
   <li>GLOCOFFS (GLObal Coastal Ocean Flood Forecasting System):<a href="https://wpringle.github.io/GLOCOFFS/" target="_blank">https://wpringle.github.io/GLOCOFFS/</a>.</li>
   <li>Brian R. Joyce, William J. Pringle, Damrongsak Wirasaet, Joannes J. Westerink, Andre J. Van der Westhuysen, Robert Grumbine, Jesse Feyenc: High resolution modeling of western Alaskan tides and storm surge under varying sea ice conditions, Ocean Modelling, Vol.141, 101421, 2019.</li>
   <li>Christof Lüpkes, Vladimir M. Gryanik, Jörg Hartmann, and Edgar L Andreas: A parametrization, based on sea ice morphology, of the neutral atmospheric drag coefficients for weather prediction and climate models, Journal of Geophysical Research, Vol.117, D13112, 2012.</li>
-  <li>G. Ling, D. Wirasaet, J. Westerink, D. H. Richter, B. Joyce, W. Pringle, M. T. Contreras Vargas, K. R. Steffen, C. N. Dawson, A. Fujisaki-Manome, E. Myers III, S. Moghimi, S. V. Vinogradov, A. Van der Westhuysen, A. Abdolali, and R. Grumbine: Studies on Parameterizations of Sea Ice Effect in a Storm Surge Model for Western Alaska, <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper370912.html" target="_blank">https://ams.confex.com/ams/2020Annual/webprogram/Paper370912.html</a>, AMS, 2020.</li>
+  <li>G. Ling, D. Wirasaet, J. Westerink, D. H. Richter, B. Joyce, W. Pringle, M. T. Contreras Vargas, K. R. Steffen, C. N. Dawson, A. Fujisaki-Manome, E. Myers, S. Moghimi, S. V. Vinogradov, A. Van der Westhuysen, A. Abdolali, and R. Grumbine: Studies on Parameterizations of Sea Ice Effect in a Storm Surge Model for Western Alaska, <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper370912.html" target="_blank">https://ams.confex.com/ams/2020Annual/webprogram/Paper370912.html</a>, AMS, 2020.</li>
 
 </ol>
 </body>
