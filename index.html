@@ -45,8 +45,8 @@ ol > li:before {
 <h1 style="text-align:center">阿拉斯加风暴潮预测系统 (in Chinese)</h1>
 <h1 style="text-align:center">アラスカ高潮予測システム (in Japanese)</h1>
 <p>DISCLAIMER: this model is under development and testing, for study only.</p>
-<h2>NOTES</h2>
-<p>Due to the GFS(https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs) products stopped providing the latest reanalysis data, the AKSSFS is now interrupted, we apologise for the inconvenience‎.</p>
+<!--<h2>NOTES</h2>
+<p>Due to the GFS(https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs) products stopped providing the latest reanalysis data, the AKSSFS is now interrupted, we apologise for the inconvenience‎.</p>-->
 <h2>UPDATES</h2>
 <ul class = "a">
 <!-- <li>Updated on 05-05-2020: Due to there are not free cores today, the simulation results haven't been updated yet. </li> -->
@@ -98,6 +98,8 @@ for the first one min_el=200, the second one min_el=100 and the other parameters
 <p>8 tidal harmonic constituents are forcing on the open ocean boundaries, <br />
 4 semi-diurnal : M2, N2, S2, K2; <br />
 4 diurnal : K1, Q1, O1, P1. <br />
+The simulation is based on <a href="https://adcirc.org/" target="_blank">ADCIRC</a> ver. 51, the following are some settings for the parameters in ADCIRC. <br />
+ICE=2, IM=511112, NTIP=2, NTIF=8, NWS=12 (w/o ice), NWS=12012 (w/ ice)...
 </p>
 <h2>5. Ice concentration (5 days forecast)</h2>
 <a href="images/icecon_zoomin_5days.gif" target="_blank">Zoom in costal area ([-170 -155 55 71]) by clicking here or the following figure</a>
