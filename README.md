@@ -5,3 +5,4 @@ Alaska Storm Surge Forecasting System (AKSSFS)
 =========================
 
 <img src="images/eta_5days.gif" alt="hi" class="inline"/> 
+<img src="images/eta_uv.gif" alt="hi" class="inline"/> 
