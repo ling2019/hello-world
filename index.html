@@ -51,6 +51,7 @@ ol > li:before {
 <ul class = "a">
 <!-- <li>Updated on 05-05-2020: Due to there are not free cores today, the simulation results haven't been updated yet. </li> -->
 <!--<li>Updated on 05-15-2020: Due to the computer maintenance from May 15 to 17, during this period the forecast results will not be updated.</li>-->
+<li>Updated on 06-13-2020: Updated the bathymetry by using <a href="https://www.gebco.net/data_and_products/gridded_bathymetry_data/" target="_blank">GEBCO2020</a>.</li>
 <li>Updated on 06-10-2020: ADCIRC Ver.55 is applied.</li>
 <li>Updated on 05-08-2020: Achieved updating the animations automatically once per day at 09:00.</li>
 <li>Updated on 05-07-2020: Achieved updating comparison with the latest observational data of St. Michael station automatically.</li>
@@ -81,7 +82,8 @@ For the floodplain side, there are two floodplains in the mesh,
 the first one is located at the north of Alaska, the second one is at Yukon Delta:<br />
 for the first one min_el=200, the second one min_el=100 and the other parameters are set the same as ocean side. 
 </p>
-<p>For the bathymetry data, we interpolated the '<a href="https://portal.nccs.nasa.gov/datashare/g6dev/BMNG/" target="_blank">topo15_compressed.nc</a>' as a background bathymetry and interpolated the '<a href="https://catalog.data.gov/dataset/southern-alaska-coastal-relief-model" target="_blank">crm_southak.nc</a>' wherever the data is available. In the bathymetry figure (Fig.4), the dark green areas above 0 meter are flood plains.
+<!--<a href="https://portal.nccs.nasa.gov/datashare/g6dev/BMNG/" target="_blank">topo15_compressed.nc</a>-->
+<p>For the bathymetry data, we interpolated the '<a href="https://www.gebco.net/data_and_products/gridded_bathymetry_data/" target="_blank">GEBCO2020</a>' as a background bathymetry and interpolated the '<a href="https://catalog.data.gov/dataset/southern-alaska-coastal-relief-model" target="_blank">crm_southak.nc</a>' in the red line polygon showed in Fig.4. In the Fig.4, the dark green areas above 0 meter are flood plains.
 </p>
 <figure>
 <img src="images/mesh4_fp_v2.png" alt="hi" class="inline"/> 
@@ -92,7 +94,7 @@ for the first one min_el=200, the second one min_el=100 and the other parameters
 <figcaption>Fig.3 - Mesh resolution</figcaption>
 </figure>
 <figure>
-<img src="images/mesh4-fp-v2-b.png" alt="hi" class="inline"/>
+<img src="images/mesh4-fp-v6-b.png" alt="hi" class="inline"/>
 <figcaption>Fig.4 - Bathymetry</figcaption>
 </figure>
 <h2>4. Forcing boundary conditions and simulation conditions</h2>
@@ -100,7 +102,7 @@ for the first one min_el=200, the second one min_el=100 and the other parameters
 4 semi-diurnal : M2, N2, S2, K2; <br />
 4 diurnal : K1, Q1, O1, P1. <br />
 The simulation is based on air-sea-ice drag parameterization incorporated <a href="https://adcirc.org/" target="_blank">ADCIRC</a> ver. 55, the following are some settings for the parameters in ADCIRC. <br />
-ICS=22, IM=511112, NTIP=2, TAU0=-3, DTDP=2, NTIF=8, NWS=12 (w/o ice), NWS=12012 (w/ ice)...
+ICS=-22, IM=511112, NTIP=2, TAU0=-3, DTDP=2, NTIF=8, NWS=12 (w/o ice), NWS=12012 (w/ ice)...
 </p>
 <h2>5. Ice concentration (5 days forecast)</h2>
 <a href="images/icecon_zoomin_5days.gif" target="_blank">Zoom in costal area ([-170 -155 55 71]) by clicking here or the following figure</a>
@@ -140,10 +142,12 @@ the red line is <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper3
 
 <h3>Red Dog Dock Station</h3>
 <p><a href="https://tidesandcurrents.noaa.gov/stationhome.html?id=9491094" target="_blank">https://tidesandcurrents.noaa.gov/stationhome.html?id=9491094</a></p>
+<p>For the error analysis statistics at this station, please click <a href="images/RDD_error_statistic.jpg" target="_blank">here</a>.</p>
 <img src="images/Mar2020_stna02.png" alt="rdd" class="inline"/>
 
 <h3>Prudhoe Bay Station</h3>
 <p><a href="https://tidesandcurrents.noaa.gov/stationhome.html?id=9497645" target="_blank">https://tidesandcurrents.noaa.gov/stationhome.html?id=9497645</a></p>
+<p>For the error analysis statistics at this station, please click <a href="images/PB_error_statistic.jpg" target="_blank">here</a>.</p>
 <img src="images/Mar2020_stna03.png" alt="pb" class="inline"/>
 
 <h3>Unalakleet Station</h3>
