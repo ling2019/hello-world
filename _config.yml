@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-minimal
 title: AK Storm Surge Forecasting System
 description: An ADCIRC-based storm surge forcasting system for Alaska area
 
