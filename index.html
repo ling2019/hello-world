@@ -122,7 +122,7 @@ the red line is <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper3
 <h2>8. Flowchart of the forecasting system</h2>
 <p>Fig.1 shows the flowchart for this forecasting system. 
 In order to get a high quality initial condition to start the forecast, the forecast simulation for each day will run 10 days hindcast, 3 days gap forecast, 
-and finally 5 days for forecast. Here, the system includes a gap forecast because we can only get the hindcast meteorological products till 3 days before. 
+and finally 5 days for forecast. Here, the system includes a gap forecast because we can only get the hindcast meteorological products untill 3 days before. 
 In the recent version of this forecasting system, it will download the GFS(Global Forecast System) meteorological products (wind, pressure, ice concentration), 
 which including the data from 13 days before to 5 days after the present date. After downloading the data, the simulation will start from 13 days before the present date, 
 running 10 days hindcast with 5 days spin up using GFS reanalysis products (<a href="https://www.ncei.noaa.gov/data/global-forecast-system/access/grid-004-0.5-degree/analysis/" target="_blank">https://www.ncei.noaa.gov/data/global-forecast-system/access/grid-004-0.5-degree/analysis/</a>), then running the rest days by using forecast products (<a href="https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/" target="_blank">https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/</a>). </p>
