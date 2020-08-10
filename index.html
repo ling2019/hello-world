@@ -47,13 +47,13 @@ ol > li:before {
 <ul class = "a">
 <!-- <li>Updated on 05-05-2020: Due to there are not free cores today, the simulation results haven't been updated yet. </li> -->
 <!--<li>Updated on 05-15-2020: Due to the computer maintenance from May 15 to 17, during this period the forecast results will not be updated.</li>-->
-<li>Updated on 08-07-2020: Updated to Version 2, simulations just include 1 day hindcast and 5 day forecast .</li>
+<li>Updated on 08-07-2020: Updated to Version 2, daily forecast simulations just include 1 day hindcast and 5 day forecast.</li>
 <li>Updated on 06-13-2020: Updated the bathymetry by using <a href="https://www.gebco.net/data_and_products/gridded_bathymetry_data/" target="_blank">GEBCO2020</a>.</li>
 <li>Updated on 06-10-2020: ADCIRC Ver.55 is applied.</li>
-<li>Updated on 05-08-2020: Achieved updating the animations automatically once per day at 09:00.</li>
+<!--<li>Updated on 05-08-2020: Achieved updating the animations automatically once per day at 09:00.</li>
 <li>Updated on 05-07-2020: Achieved updating comparison with the latest observational data of St. Michael station automatically.</li>
 <li>Updated on 05-02-2020: Achieved updating the simulation results of 4 stations (Red Dog Dock, Prudhoe Bay, Unalakleet, Nome) automatically once per day, 
-and the latest observed data retrieved from the 4 NOAA stations updated twice (11:00, 18:00) per day in this page.</li>
+and the latest observed data retrieved from the 4 NOAA stations updated twice (11:00, 18:00) per day in this page.</li>-->
 <li>Established on 04-28-2020: Testing Version 1, forecast one time per day (starts running at 01:00 every day automatically).</li>
 </ul>
 <!--<p>NOTES: The animations (5, 6, 7, 8) and the maximum surface elevation image (9) in this page are updated manually for the present, might not be updated every day, but it is in plan to set up updating automatically for the future.</p> -->
@@ -130,11 +130,11 @@ the red line is <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper3
 <p>The western coast of Alaska has experienced a number of storm surge events (<a href="https://slosh.nws.noaa.gov/docs/Shaffer1997StormSurgesInTheRegion.pdf" target="_blank">[1]</a>, <a href="https://www.commerce.alaska.gov/web/Portals/4/pub/2009_USACE_Storm_Damage_Flooding_Evaluation.pdf" target="_blank">[2]</a>). In order to predict the water level around the western coast of Alaska, we developed this high resolution and continuously forecasting system. In this system, the <a href="https://adcirc.org/" target="_blank">ADCIRC [3]</a> storm surge model acts as a main engine and incorporated air-sea-ice drag parameterization, which aim at higher accuracy for predicting water level during winter storm by considering sea ice coverage. For more detail about air-sea-ice drag parameterization, please refer to [4], [5], <a href="https://ams.confex.com/ams/2020Annual/webprogram/Paper370912.html" target="_blank">[6]</a>.</p>
 <h2>8. Flowchart of the forecasting system</h2>
 <p>Fig.1 shows the flowchart for this forecasting system. 
-In order to get a high quality initial condition to start the forecast, the forecast simulation for each day will run 10 days hindcast, 3 days gap forecast, 
-and finally 5 days for forecast. Here, the system includes a gap forecast because we can only get the hindcast meteorological products untill 3 days before. 
-In the recent version of this forecasting system, it will download the GFS(Global Forecast System) meteorological products (wind, pressure, ice concentration), 
-which including the data from 13 days before to 5 days after the present date. After downloading the data, the simulation will start from 13 days before the present date, 
-running 10 days hindcast with 5 days spin up using GFS reanalysis products (<a href="https://www.ncei.noaa.gov/data/global-forecast-system/access/grid-004-0.5-degree/analysis/" target="_blank">https://www.ncei.noaa.gov/data/global-forecast-system/access/grid-004-0.5-degree/analysis/</a>), then running the rest days by using forecast products (<a href="https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/" target="_blank">https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/</a>). </p>
+In order to get a high quality initial condition to start the forecast, on the first day of the forecast simulation, 
+we did a 12 days hindcast including 5 days spin up by using GFS reanalysis products (<a href="https://www.ncei.noaa.gov/data/global-forecast-system/access/grid-004-0.5-degree/analysis/" target="_blank">https://www.ncei.noaa.gov/data/global-forecast-system/access/grid-004-0.5-degree/analysis/</a>) for 10 days and GFS forecast products (<a href="https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/" target="_blank">https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/</a>) for 2 days, after the 12 days hindcast, 
+the forecast system goes into a daily loop simulation for 6 days including 1 day hindcast(green day in Fig.1) and 5 days forecast(blue days in Fig.1).
+In Fig.1, the red 1d indicates the present day.
+</p>
 <figure>
 <img src="v2-images/flowchart-v2.png" alt="hi" class="inline"/> 
 <figcaption>Fig.1 - Flowchart</figcaption>
